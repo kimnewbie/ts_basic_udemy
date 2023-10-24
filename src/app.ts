@@ -37,6 +37,7 @@ function add(a: Combinable, b: Combinable) {
 const result = add("Max", "Kim");
 result.split(" ");
 
+// ## 선택적 체이닝
 const fetchUserData = {
   id: "ul",
   name: "Max",
@@ -47,6 +48,14 @@ const fetchUserData = {
 console.log(fetchUserData.job && fetchUserData.job.title); // ## 런타임 오류를 막아주는 구문
 console.log(fetchUserData?.job?.title); // ## 런타임 오류를 막아주는 구문
 
+// ## Null 병합
+const userInput = undefined;
+
+const storedData = userInput ?? "DEFAULT";
+
+console.log(storedData);
+
+// ##
 type UnknownEmployee = Employee | Admin;
 
 function printEmployeeInformation(emp: UnknownEmployee) {
