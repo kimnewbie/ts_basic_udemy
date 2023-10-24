@@ -37,6 +37,16 @@ function add(a: Combinable, b: Combinable) {
 const result = add("Max", "Kim");
 result.split(" ");
 
+const fetchUserData = {
+  id: "ul",
+  name: "Max",
+  job: { title: "CEO", description: "My own company" },
+};
+
+// console.log(fetchUserData.job.title); // CEO
+console.log(fetchUserData.job && fetchUserData.job.title); // ## 런타임 오류를 막아주는 구문
+console.log(fetchUserData?.job?.title); // ## 런타임 오류를 막아주는 구문
+
 type UnknownEmployee = Employee | Admin;
 
 function printEmployeeInformation(emp: UnknownEmployee) {
