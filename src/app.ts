@@ -70,6 +70,9 @@ function useVehicle(vehicle: Vehicle) {
   if (vehicle instanceof Truck) {
     vehicle.loadCargo(1000);
   }
+  if ("loadCargo" in vehicle) {
+    vehicle.loadCargo(1000);
+  }
 }
 
 useVehicle(v1);
